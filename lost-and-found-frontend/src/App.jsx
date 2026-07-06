@@ -6,8 +6,9 @@ import InboxDrawer from './components/InboxDrawer';
 import ChatBox from './components/ChatBox';
 import EditItemModal from './components/EditItemModal';
 import AdminDashboard from './components/AdminDashboard';
+import API_URL from './config.js';
 
-const socket = io.connect("http://localhost:5000")
+const socket = io.connect(fetch(`${API_URL}/api/items`))
 const AVATAR_OPTIONS = ['🦊', '🐱', '🐼', '🦁', '🐸', '🐨', '🤖', '🥷', '🚀', '🌟', '👻', '👾'];
 
 function App() {
